@@ -150,50 +150,113 @@ WebSearchツールを使用:
 
 ### 2. issue文案の自動作成
 
-以下のテンプレートに従って、ユーザーのために完全なissue文案を作成してください：
+ユーザーの問題をヒアリングし、適切なissue typeを判断してから、以下のテンプレートに従って文案を作成してください。
+
+#### Issue Type: Feature Request
+
+GitHubの公式テンプレートに従って作成：
 
 ```markdown
-## Description
-[問題の明確な説明。何が起きているか、なぜ問題なのか]
+## Preflight Checklist
+
+- [x] I have searched existing requests and this feature hasn't been requested yet
+- [x] This is a single feature request (not multiple features)
+
+## Problem Statement
+[何の問題を解決しようとしているか？なぜこの機能が必要か？解決策ではなく問題に焦点を当てる。ワークフローを理解できるよう説明]
+
+## Proposed Solution
+[この機能をどのように動作させたいか？理想的なユーザー体験を説明。具体的に、どのように操作するかを記述]
+
+## Alternative Solutions
+[検討した代替案や現在使用している回避策は？]
+
+## Use Case Example
+[この機能を使用する具体的な実例を提供。ステップバイステップでシナリオを説明]
+
+## Priority
+[このワークフローにとってこの機能の重要度は？]
+- [ ] Critical - Blocking my work
+- [ ] High - Significantly improves my workflow
+- [ ] Medium - Nice to have
+- [ ] Low - Minor improvement
+
+## Feature Category
+[この機能はどの領域に関連するか？]
+- [ ] Claude Code Web
+- [ ] Developer Experience
+- [ ] Performance
+- [ ] Documentation
+- [ ] Other: [specify]
+
+## Additional Context
+[提案された機能のスクリーンショットやモックアップ、他のツールの類似機能へのリンク、技術的な考慮事項や制約、その他関連情報]
+
+## Related Issues
+- #[issue番号] ([簡単な説明])
+```
+
+#### Issue Type: Bug Report
+
+```markdown
+## Bug Description
+[何が起きているか？なぜ問題なのか？]
 
 ## Expected Behavior
-[期待される動作。どうあるべきか]
+[期待される動作]
 
 ## Current Behavior
-[現在の動作。実際に何が起きているか]
+[実際に何が起きているか]
+
+## Steps to Reproduce
+1. [手順1]
+2. [手順2]
+3. [手順3]
+
+## Environment
+- Platform: Claude Code on the web
+- Browser: [ブラウザとバージョン]
+- OS: [OSとバージョン]
+- Date: [YYYY-MM-DD]
 
 ## Impact
 [この問題がユーザーに与える影響]
 - [具体的な影響1]
 - [具体的な影響2]
 
-## Environment
-- Platform: Claude Code on the web
-- Browser: [ブラウザ情報]
-- Date: [YYYY-MM-DD]
+## Additional Context
+[スクリーンショット、ログ、その他関連情報]
 
-## Steps to Reproduce (該当する場合)
-1. [手順1]
-2. [手順2]
-3. [手順3]
+## Related Issues
+- #[issue番号] ([簡単な説明])
+```
+
+#### Issue Type: Documentation Issue
+
+```markdown
+## Documentation Issue
+[欠けている、不明確、または不正確なドキュメントは何か？]
+
+## Current Documentation
+[現在のドキュメントの場所とURL]
+
+## Suggested Improvement
+[どのように改善すべきか？]
+
+## Impact
+[この問題が読者に与える影響]
 
 ## Additional Context
-[追加の文脈や背景情報]
-
-## Suggested Solution (提案がある場合)
-[可能であれば、解決策の提案]
-
-## Related Issues (該当する場合)
-- #[issue番号] ([簡単な説明])
+[スクリーンショット、例、その他関連情報]
 ```
 
 ### 3. タイトルの提案
 
-適切なissueタイトルを提案してください：
+issue typeに応じた適切なタイトルを提案してください：
 
-- **バグの場合**: `[BUG] [Claude Code Web] [簡潔な問題の説明]`
-- **機能リクエストの場合**: `[Feature Request] [Claude Code Web] [簡潔な要望]`
-- **ドキュメントの場合**: `[DOCS] [Claude Code Web] [簡潔な内容]`
+- **Bug Report**: シンプルで簡潔な問題の説明（例: "Session resets after PR merge in web version"）
+- **Feature Request**: シンプルで簡潔な要望（例: "Support for private repositories in web version"）
+- **Documentation Issue**: `[DOCS]` プレフィックス + 簡潔な内容（例: "[DOCS] Missing web version limitations in getting started guide"）
 
 ### 4. 関連情報の提供
 
