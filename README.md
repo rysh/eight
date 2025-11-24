@@ -7,7 +7,9 @@
 # 紋章: 八花弁スピログラフ
 
 （R=200, r=175, d=41）
-添付は参考画像
+
+参考:
+![紋章](https://github.com/user-attachments/assets/717349f8-0697-4f58-817f-4c40aee7927b)
 
 # 指針
 
