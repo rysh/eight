@@ -133,6 +133,82 @@ Claude Code on the webの制限により、マージ後は新しいセッショ�
 
 **注意**: ローカル版とweb版では異なる問題があるため、必ず「Claude Code on the web」であることを明記してフィードバックしてください。
 
+## ユーザーが問題をフィードバックしたい時の対応手順
+
+**ユーザーが「フィードバックしたい」「issueを作りたい」などと言った場合：**
+
+### 1. 既存issueの確認
+
+まず、同様の問題が既に報告されていないか確認してください：
+
+```
+WebSearchツールを使用:
+クエリ例: site:github.com/anthropics/claude-code/issues "[問題のキーワード]" web
+```
+
+複数の関連キーワードで検索し、重複を避けてください。
+
+### 2. issue文案の自動作成
+
+以下のテンプレートに従って、ユーザーのために完全なissue文案を作成してください：
+
+```markdown
+## Description
+[問題の明確な説明。何が起きているか、なぜ問題なのか]
+
+## Expected Behavior
+[期待される動作。どうあるべきか]
+
+## Current Behavior
+[現在の動作。実際に何が起きているか]
+
+## Impact
+[この問題がユーザーに与える影響]
+- [具体的な影響1]
+- [具体的な影響2]
+
+## Environment
+- Platform: Claude Code on the web
+- Browser: [ブラウザ情報]
+- Date: [YYYY-MM-DD]
+
+## Steps to Reproduce (該当する場合)
+1. [手順1]
+2. [手順2]
+3. [手順3]
+
+## Additional Context
+[追加の文脈や背景情報]
+
+## Suggested Solution (提案がある場合)
+[可能であれば、解決策の提案]
+
+## Related Issues (該当する場合)
+- #[issue番号] ([簡単な説明])
+```
+
+### 3. タイトルの提案
+
+適切なissueタイトルを提案してください：
+
+- **バグの場合**: `[BUG] [Claude Code Web] [簡潔な問題の説明]`
+- **機能リクエストの場合**: `[Feature Request] [Claude Code Web] [簡潔な要望]`
+- **ドキュメントの場合**: `[DOCS] [Claude Code Web] [簡潔な内容]`
+
+### 4. 関連情報の提供
+
+- 既存の関連issueがあれば、リンクと共に提示
+- 類似の問題や関連する議論があれば言及
+- 既知の回避策があれば記載
+
+### 重要な注意点
+
+- **必ず「Claude Code on the web」であることを明記**
+- **英語で作成**（GitHubの公式言語）
+- **具体的かつ簡潔に**
+- **感情的な表現は避け、事実ベースで**
+- **再現手順は明確に**
+
 ---
 
 最終更新: 2025-11-24
